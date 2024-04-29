@@ -1,17 +1,24 @@
 /**
  * Lab 7 - Text
  */
+let showfirstphrase = true
 
 function setup() {
   createCanvas(640, 240);
-  textFont("Arial");
+  textFont("Source Code Pro");
 }
 
 function draw() {
   background(200);
-  textSize(16);
-  text("one small step for a man ...", 20, 60);
-  textSize(32);
-  text("one giant leap for mankind.", 20, 160);
+  if (showfirstphrase) {
+    textSize(16);
+    text("Peeka", 30, 60);
+  } else {
+    textSize(32);
+    text("Boo!", 100, 160);
+  }
+}
 
+function mousePressed() {
+  showfirstphrase = !showfirstphrase
 }
